@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13071077174370" configfile="/fabrica-zara-web/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="proveedores" id="pf130780508759124" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf130780508759125" path="/fabrica-zara-web/faces/proveedores/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="fabrica-zara-web/faces/proveedores/stock.xhtml" id="pf130780508759126" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf130780508759125" path="/fabrica-zara-web/faces/proveedores/stock.xhtml"/>
+  <links id="pf130780508759125" target="pf130780508759126" source="pf130780508759124" outcome="proveedores" fromaction="#{proveedoresBean.procesarEnvioProveedor}"/>
+</pageflow:Pageflow>

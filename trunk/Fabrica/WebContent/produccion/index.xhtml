@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+
+	>
+                
+<ui:composition template="../master.xhtml">
+
+	<ui:define name="title">
+	Produccion
+	</ui:define>
+	
+	<ui:define name="head">
+	
+	</ui:define>
+	
+	<ui:define name="header">
+	
+	</ui:define>
+	
+	<ui:define name="subheader">
+<h2>Produccion</h2>
+	    <p>Envio al sector de produccion de un pedido de fabricacion de todos los articulos pendientes.</p>
+	</ui:define>
+	
+	<ui:define name="content">
+	    
+	    <h:form id="MyForm">
+	    
+	   <p><h:commandButton value="Fabricar" action="#{produccionBean.fabricar}" styleClass="button tiny blue"></h:commandButton></p>    
+       
+    </h:form>
+	  
+	</ui:define>
+	
+	<ui:define name="footer">
+	
+	</ui:define>
+	
+</ui:composition>
+</html>

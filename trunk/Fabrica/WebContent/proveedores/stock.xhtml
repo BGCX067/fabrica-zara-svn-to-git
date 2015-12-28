@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="../master.xhtml">
+
+	<ui:define name="title">
+	Stock
+	</ui:define>
+
+	<ui:define name="head">
+		<link href="../../stylesheets/widgets/table.css" rel="stylesheet"
+			type="text/css" />
+		<link href="../../stylesheets/widgets/pagination.css" rel="stylesheet"
+			type="text/css" />
+		<script type="text/javascript"
+			src="../../javascripts/jquery.dataTables.js"></script>
+		<script type="text/javascript"
+			src="../../javascripts/proveedores/stock.js"></script>
+	</ui:define>
+
+	<ui:define name="header">
+
+	</ui:define>
+
+	<ui:define name="subheader">
+		<h2>Stock</h2>
+	</ui:define>
+
+	<ui:define name="content">
+
+		<div class="floatleft">
+			<h:dataTable id="materiaPrimaTable" value="#{proveedoresBean.stock}"
+				var="item">
+				<h:column>
+					<f:facet name="header">
+					Referencia
+				</f:facet>
+					<h:outputText value="#{item.referencia}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+					Nombre
+				</f:facet>
+					<h:outputText value="#{item.nombre}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+					Cantidad
+				</f:facet>
+					<h:outputText value="#{item.cantidad}" />
+				</h:column>
+			</h:dataTable>
+		</div>
+
+	</ui:define>
+
+	<ui:define name="footer">
+
+	</ui:define>
+
+</ui:composition>
+</html>

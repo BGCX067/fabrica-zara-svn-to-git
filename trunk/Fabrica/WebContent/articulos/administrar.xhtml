@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="../master.xhtml">
+
+	<ui:define name="title">
+	Articulos
+	</ui:define>
+
+	<ui:define name="head">
+		<link href="../../stylesheets/widgets/table.css" rel="stylesheet"
+			type="text/css" />
+		<link href="../../stylesheets/widgets/pagination.css" rel="stylesheet"
+			type="text/css" />
+		<script type="text/javascript"
+			src="../../javascripts/jquery.dataTables.js"></script>
+		<script type="text/javascript"
+			src="../../javascripts/articulos/administrar.js"></script>
+	</ui:define>
+
+	<ui:define name="header">
+
+	</ui:define>
+
+	<ui:define name="subheader">
+		<h2>Administrar Articulos</h2>
+	</ui:define>
+
+	<ui:define name="content">
+
+			<div style="width:900px;">
+			<div class="floatleft" >
+			<h:dataTable id="articulosTable" value="#{articulosBean.articulosRegistrados}"
+				var="item">
+				<h:column>
+					<f:facet name="header">
+					Id
+				</f:facet>
+					<h:outputText value="#{item.id}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+					Ref
+				</f:facet>
+					<h:outputText value="#{item.referencia}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+					Nombre
+				</f:facet>
+					<h:outputText value="#{item.descripcion}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+					Linea
+				</f:facet>
+					<h:outputText value="#{item.linea}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+					Color
+				</f:facet>
+					<h:outputText value="#{item.color}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+					Seccion
+				</f:facet>
+					<h:outputText value="#{item.seccion}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+					Precio
+				</f:facet>
+					<h:outputText value="#{item.precio}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+					Nuevo
+				</f:facet>
+					<h:outputText value="Si" rendered="#{item.nuevo}" />
+					<h:outputText value="No" rendered="#{!item.nuevo}" />
+				</h:column>
+				
+			</h:dataTable>
+			
+		</div>
+		<div id="especificacion" class="floatright"></div>
+			
+<!-- 				<h:selectOneListbox id="pickArticulo" value="#{articulosBean.selectedItem}"> -->
+<!-- 					<f:selectItems value="#{articulosBean.articulos}"/> -->
+<!-- 				</h:selectOneListbox> -->
+			</div>
+			
+			
+
+			
+	</ui:define>
+
+	<ui:define name="footer">
+
+	</ui:define>
+
+</ui:composition>
+</html>

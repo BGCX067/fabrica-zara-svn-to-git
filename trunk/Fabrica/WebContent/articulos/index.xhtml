@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+
+	>
+                
+<ui:composition template="../master.xhtml">
+
+	<ui:define name="title">
+	Articulos
+	</ui:define>
+	
+	<ui:define name="head">
+	
+	</ui:define>
+
+	<ui:define name="header">
+	
+	</ui:define>
+	
+	<ui:define name="subheader">
+	<h2>Articulos nuevos</h2>
+	<p>Recepcion de la informacion de nuevos articulos a ingresar en la base de datos. </p>
+	</ui:define>
+	
+	<ui:define name="content" >
+	    
+	    
+	    <h:form id="myForm" enctype="multipart/form-data">
+	    
+	    <p><t:inputFileUpload id="file" value="#{articulosBean.uploadedFile}" required="true" /><h:commandButton value="Submit" action="#{articulosBean.registrarArticulosNuevos}" styleClass="button tiny blue"></h:commandButton></p>
+	    
+	      
+       
+    </h:form>
+	</ui:define>
+	
+	<ui:define name="footer">
+	
+	</ui:define>
+	
+</ui:composition>
+</html>

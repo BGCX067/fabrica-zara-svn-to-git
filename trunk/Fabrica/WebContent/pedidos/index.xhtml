@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:t="http://myfaces.apache.org/tomahawk">
+
+<ui:composition template="../master.xhtml">
+
+	<ui:define name="title">
+	Pedidos
+	</ui:define>
+
+	<ui:define name="head">
+
+	</ui:define>
+
+	<ui:define name="header">
+
+	</ui:define>
+	
+	<ui:define name="subheader">
+	<h2>Pedidos</h2>
+		<p>Recepcion de una solicitud de fabricacion proveniente de un
+			centro de distribucion.</p>
+	</ui:define>
+
+	<ui:define name="content">
+		
+		<h:form id="myForm" enctype="multipart/form-data">
+
+			<p>
+				<t:inputFileUpload id="file" value="#{pedidosBean.uploadedFile}" required="true" />
+				<h:commandButton value="Submit" styleClass="button tiny blue" action="#{pedidosBean.registrarSolicitudFabricacion}"></h:commandButton>
+			</p>
+
+		</h:form>
+
+	</ui:define>
+
+	<ui:define name="footer">
+
+	</ui:define>
+
+</ui:composition>
+</html>

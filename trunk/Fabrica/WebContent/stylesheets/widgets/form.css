@@ -1,0 +1,179 @@
+﻿/* #################################################### 
+# FORMS 
+####################################################### */
+ 
+form { counter-reset: fieldsets; display: block; }
+	
+	form fieldset { border: none; margin: 10px 0; }	
+	form fieldset:last-of-type { margin-bottom: 0; }
+		form fieldset fieldset { margin: 0; }
+
+		form legend { border: none; color: #d8d7d7; font-size: 1.9em; font-weight: bold; padding: 5px 0 0; }
+
+		form ol li { clear: both; line-height: 20px; list-style: none; margin: 10px 0 0 0; padding: .3em 0; }
+			form ol li small { font-size: 1em; font-style: italic; }
+
+			form ol ol { list-style: decimal; }
+				form ol ol li { display: block; float: left; line-height: normal; margin: 0; padding: 20px; width: 860px; }
+					form ol ol li.odd { background: #e6f0f2; }
+					form ol ol li.even { background: #fff; }
+
+					form ol ol ol li { display: block; float: none; margin:0 0 10px; padding: 0; width: auto; }
+
+				/* FOR APP FORM SETUP */
+				#page-container ol ol li { background: none; border: none; display: block; float: left; height: auto; line-height: normal; margin: 0; padding: 0 0 0 35px; width: auto; }
+		
+		/*form label { color: #858585; float: left; font-size: 1.3em; text-align: left; width: 150px; }*/
+		form label { color:#858585; font-size: 1.1em; font-weight:bold; float: left; text-align: left; width: 150px; text-shadow: 0 1px 1px rgba(255,255,255,1); }
+		form label.two-line { width: 100%;margin-bottom:5px; }
+		
+		form fieldset fieldset label { background:none no-repeat left 50%; line-height: 20px; padding: 0; width: auto; }
+			form fieldset fieldset label:hover { cursor: pointer; }
+			
+		form input:not([type=radio]):not([type=checkbox]):not([type=submit]),
+		/*form textarea { color: #858585; font-size: 1.8em; margin: 0; outline: none; padding: 5px; width: 345px; resize: none; }
+		form textarea { font-size: 18px; font-family: Calibri; }*/
+		form textarea { color: #858585; margin: 0;  width: 250px; resize: none; }
+		/*form textarea { font-family: Calibri; }*/
+			td form input:not([type=radio]) { font-size: 1em !important; }
+				
+			/*form input:not([type=submit]):focus,
+			form textarea:focus { background: #eff5ff; width: 200px; }*/
+
+			.customfile-input { width: auto !important; }
+				
+		form input[type=radio] { float: left; margin: 0 5px 0 10px; outline: none; width: auto !important; }
+
+		form input[required=required] { background: #fff !important; }
+
+		form input:disabled[type=checkbox] { margin-right: 5px; width: auto !important; }
+
+		form .focusField, div.dataTables_filter .focusField{ background:#fff !important; border:solid 2px #006699 !important; color:#000; resize: none; }  
+		form .idleField, div.dataTables_filter .idleField{ background: #f8f8f8; border: solid 2px #d8d7d7; resize: none; }
+		form .curFocus { background: #fff !important; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+
+		form p.example { color: #d8d7d7d; font-size: 1em; line-height: 13px; margin: 6px 0 10px 150px; width: 250px; }
+		form span.example { clear: both; color: #d8d7d7d; display: block; font-size: 0.8em; line-height: 13px; }
+
+		input[disabled='disabled'], textarea[disabled='disabled'] { border: solid 1px #ccc; }
+
+		/* UNIQUE ELEMENTS */
+		input.floatright { margin: 0 0 0 5px; }
+
+		.radio .yes, .radio .no { float: left; margin-top: 20px; position: relative; width: 70px; }
+	
+			.radio .yes input, .radio .no input { margin: 0; position: absolute; left: 5px; top: 5px; z-index: 0; }
+			.radio .yes label, .radio .no label { cursor: pointer; display: block; height: 42px; position: relative; text-indent: -9999px; width: 64px; z-index: 1006; }
+
+			.radio .yes label { background: url(../../../Images/yes.png) no-repeat 0 -42px; }
+			.radio .no label { background: url(../../../Images/no.png) no-repeat 0 -42px; }
+
+			.radio .yes label.focus, .radio .no label.focus { background-position: 0 0; outline: none; }
+			.radio .yes label.checked, .radio .no label.checked { background-position: 0 0; }
+
+	/* CUSTOM CHECKBOXES AND RADIO BUTTONS */
+	.custom-checkbox, .custom-radio { padding: 10px 0; position: relative; }
+	.custom-checkbox input, .custom-radio input { opacity: 0; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=00)"; filter: alpha(opacity = 00); position: absolute; }
+		.custom-checkbox input:focus, .custom-radio input:focus { width: 0 !important; }
+	.custom-checkbox label, .custom-radio label { clear: both; cursor: pointer; display: block; font-size: 1.8em; height: 35px; margin: 0 0 0 .3em; padding: 5px 1em 0 40px; position: absolute; top: 0; vertical-align: middle; width: auto; z-index: 998; }
+	.custom-checkbox label { background: url(../../../Images/Forms/checkbox.png) no-repeat top left; }
+	.custom-radio label { background: url(../../../Images/Forms/radiobutton.png) no-repeat top left; }
+
+	.custom-checkbox label, .custom-radio label { background-position: top left; }
+	.custom-checkbox label.checked, .custom-radio label.checked { background-position: bottom left; }
+	.custom-checkbox label { background-position: -8px -10px; }
+	.custom-radio label { background-position: -8px -14px; }
+	.custom-checkbox label.hover, .custom-checkbox label.focus { background-position: -8px -111px; }
+	.custom-radio label.hover, .custom-radio label.focus { background-position: -8px -116px; }
+	.custom-checkbox label.checked, .custom-radio label.checked { background-position: -8px -213px; }
+	.custom-checkbox label.checkedHover, .custom-checkbox label.checkedFocus { background-position: -8px -314px; }
+	.custom-checkbox label.inactive { background-position: -8px -514px; }
+	.custom-checkbox label.checkedInactive { background-position: -8px -414px; }
+
+	/* CUSTOM UPLOAD ELEMENTS */
+	.customfile-input { position: absolute; cursor: pointer; border: 0; opacity: 0; -moz-opacity: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); z-index: 999;  }
+		.customfile { width: 400px; background: #fff; cursor: pointer; float: left; overflow: hidden; padding: 5px; margin-right: 5px; border: 2px solid #dfdfdf; position: relative; }
+		.customfile-disabled { opacity: .5; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); cursor: default;  }
+		.customfile-feedback { display: block; margin: 1px 1px 1px 5px; font-size: 1.6em; color: #858585; font-style: italic; }
+		.customfile-feedback-populated { color: #858585; font-style: normal; font-weight: bold; padding-left: 50px; background: url(../../../Images/Icons/generic-icon.png) left -5px no-repeat; max-width: 250px; overflow: hidden; text-overflow: ellipsis; }
+		.customfile-button { border: 1px solid #999; background: #d8d7d7;  color: #fff; font-weight: bold; float: right; width: 50px; text-align: center; text-decoration: none;  font-size: 1.2em; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;  }
+		.customfile-hover .customfile-button, .customfile-focus .customfile-button  { background: #858585; border-color:#aaa; color:#111; cursor: pointer; }
+
+		/* FILE TYPE ICONS */
+		.customfile-ext-jpg, .customfile-ext-gif, .customfile-ext-png, .customfile-ext-jpeg, .customfile-ext-bmp { background-image: url(../../../Images/Icons/image-icon.png);}
+		.customfile-ext-mp3, .customfile-ext-mp4, .customfile-ext-mov, .customfile-ext-swf, .customfile-ext-wav, .customfile-ext-m4v { background-image: url(../../../Images/Icons/media-icon.png);}
+		.customfile-ext-zip, .customfile-ext-tar, .customfile-ext-sit { background-image: url(../../../Images/Icons/zip-icon.png);}
+
+		#frmCsvUpload .customfile, #uploadForm .customfile { width: 70%; }
+
+	/* SELECT BUTTON ELEMENTS */
+	.custom-select { float:left; text-decoration:none; text-align:left; cursor:pointer; position:relative; background:#fff url(../../../Images/Forms/button-silver.png) left center repeat-x; border:1px solid #b3b3b3; font-size:1.3em; font-weight:bold; overflow:visible; width:180px; text-shadow:1px 1px 0 rgba(255,255,255,1); }
+	.custom-select:hover,.custom-select:focus,.custom-select-open { background-position:right center; border-color:#999; }
+	/*status text*/
+	.custom-select-status { float:left; line-height:2; color:#444; padding:.2em 8px;  }
+	.custom-select-roletext { position: absolute; left: -99999px; }
+	/* button arrow icon*/
+	.custom-select-button-icon { float:right; background:#fff url(../../../Images/Forms/button-orange.png) left center repeat-x; height:2.5em; width:2em; }
+	.custom-select:hover .custom-select-button-icon, .custom-select:focus .custom-select-button-icon, .custom-select-open .custom-select-button-icon { background-position: -500px center; }
+
+	/*menu styles*/
+	.custom-select-menu { border:1px solid #b3b3b3; background:#f7f6f6; z-index:999999; position:absolute; margin:0; padding:0; font-size:1.3em; width:180px; cursor: pointer; text-shadow:1px 1px 0 #fafafa; overflow: auto; overflow-x: hidden; }
+
+	/*hidden menu state*/
+	.custom-select-menu-hidden { display:none; }
+
+	/*li styles*/
+	.custom-select-menu li { padding:0; margin:0; list-style:none; clear:both; }
+	.custom-select-menu li a { text-decoration:none; color:#555; display:block; cursor: pointer; padding:.5em 5px; text-shadow:1px 1px 0 #f9f9f9; }
+	.custom-select-menu li.hover-focus { background:#fee9c6 right center repeat-x; color:#444; }
+	.custom-select-menu li.selected { background:#faa61a url(../../../Images/Forms/menu-orange.png) left center repeat-x; color:#fff; }
+	.custom-select-menu li.selected a {color: #fff; text-shadow:1px 1px 0 #2d7406; }
+
+	/*hide native select*/
+	.select-hidden { display: none !important; }
+
+	.full-width-label { margin-right: 5px; width: auto !important; }
+	.full-width-label.clear { margin-bottom: 5px; }
+	#browseFileLabel { font-size:11px; color:#069; padding: 5px; }
+	#frmCsvUpload label { color: #858585; font-size: 1.9em; }
+
+    /* #################################################### 
+    # AVAILABILITY FORMS
+    ####################################################### */
+    #availabilities-page input, availabilitytable-wrapper td input { margin: 3px; width: auto; }
+    
+/* #################################################### 
+# VALIDATION
+####################################################### */
+
+/*.error, .field-validation-error { height:15px; background-color: #fff; border:1px solid red; font-size:1.1em; color:#000; padding:3px 10px; margin-left:-2px; z-index:9999; border-radius: 4px; -moz-border-radius:4px; -webkit-border-radius:4px; box-shadow: 0 0 6px rgba(221,221,221,0.5); -moz-box-shadow:0 0 6px rgba(221,221,221,0.5); -webkit-box-shadow:0 0 6px rgba(221,221,221,0.5);	}
+label.error, label.field-validation-error { border:1px solid red !important; padding:3px 10px !important; }
+	/* Tooltip On Error Message */
+	/*.error em, .field-validation-error em { display:block; width:0; height:0; border:10px solid; border-color:red transparent transparent; position:absolute; bottom:-21px; left:2px; }
+
+.input-validation-valid, .field-validation-valid, .validation-summary-valid { display:none; }
+.input-validation-error { background-color:#fee; border:1px solid red !important; outline: none; }
+.input-validation-error:focus { outline:none; }
+input[type="text"].input-validation-error:focus, select.input-validation-error:focus { outline:none; }
+
+.err  { background-color:red; color: #fff; }*/
+
+/* #################################################### 
+# FIELD HELP TEXT
+####################################################### */
+.form-help { float: left; width: 200px; }
+	.form-help p { font-size: 1.4em; margin-left: 25px; }
+
+.answer-container { float: right; margin-top: -36px; }
+
+#reset-password-form p.example { margin: 6px 0 10px !important; }
+
+fieldset#competencies_list { margin-left: 118px; position: absolute; z-index: 20; }
+	fieldset#competencies_list li { display: block; clear: both; }
+		fieldset#competencies_list input { float: left; width: auto; }
+
+.questionnaire .custom-checkbox label, .questionnaire .custom-radio label { z-index: 1050; }
+
+#file_upload-container .customfile { float: none; width: 345px; }
+
+

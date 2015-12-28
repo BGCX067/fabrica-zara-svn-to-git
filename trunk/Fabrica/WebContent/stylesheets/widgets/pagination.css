@@ -1,0 +1,17 @@
+﻿/* #################################################### 
+# Pagination  
+####################################################### */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next { float: left; height: 19px; margin-left: 3px; width: 19px; }
+.paging_full_numbers { color: #858585; float: right; height: 22px; line-height: 22px; margin: 10px 0 0 !important; text-align: right; }
+
+.paging_full_numbers { margin: 0 auto; display: block; font-size: 1em; list-style: none; }
+	.paging_full_numbers span { padding:4px 2px; }
+	.paging_full_numbers span span { color: #858585; cursor: pointer; *cursor: hand; margin: 1px; padding:4px 10px; text-decoration:none; text-shadow: 1px 1px 0px rgba(255,255,255,1); filter: dropshadow(color=#ffffff, offx=1, offy=1); -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
+		.paginate_button { padding: 5px 5px 4px; text-shadow: 0 1px 0 rgba(255,255,255,1); }
+			.paging_full_numbers span.paginate_active { background-color: #faa61a !important; color: #fff; text-shadow: 1px 0 1px rgba(0,0,0,.5); filter: dropshadow(color=#000000, offx=-1, offy=-1); }
+				.paging_full_numbers span.paginate_button:hover { background-color: #fee9c6; cursor: pointer; *cursor: hand; }
+
+			.paging_full_numbers .first, .paging_full_numbers .previous, .paging_full_numbers .next, .paging_full_numbers .last { background: #e8e8e8; margin: 0 1px; padding: 4px 5px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
+			.paging_full_numbers span.fg-button { cursor: pointer; padding: 0 5px; }
+
+#applicant-table_paginate { font-size: 1em; }

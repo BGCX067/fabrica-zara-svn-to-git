@@ -1,0 +1,40 @@
+/* DataTables features */ 
+.dataTables_wrapper { clear: both; position: relative; min-height: 150px; margin-top: 5px; _height: 250px; zoom: 1; /* Feeling sorry for IE */ }
+	.dataTables_processing { background-color: #e6f0f2; border: 1px solid #ddd; color: #999; font-size: 1.4em; height: 30px; margin-left: -125px; padding: 14px 0 2px 0; position: absolute; top: 50%; left: 50%; text-align: center; width: 250px; z-index: 900; }
+	.dataTables_length { clear: both; display: block; text-align: right; }
+
+	.dataTables_filter { margin: 10px 0; }
+		.dataTables_filter > input { color: #858585; font-size: 1.8em; margin: 0; outline: none; padding: 5px; width: 95%; /*padding*2 + border*2 = 270px*/ resize: none; }
+
+.fg-toolbar { font-size:0.7em; padding:5px; }
+
+div.box { background-color: #e5e5ff; border: 1px solid #8080ff; height: 100px; padding: 10px; overflow: auto; }
+
+.dataTables_empty { font-size: 1em !important; margin-top: 90px; text-align: center; }
+ 
+/* #################################################### 
+# TABLES
+####################################################### */
+
+table { border-collapse: collapse; width: 100%; }
+	table thead th { color:#858585; font-size: 1.1em; font-weight:bold; padding: 5px 10px; text-align: left; text-shadow: 0 1px 1px rgba(255,255,255,1); white-space:nowrap; vertical-align:middle; }
+
+	table tbody tr, table tbody tr a { color:#858585; text-shadow: 0 1px 1px rgba(255,255,255,1); }
+
+		table tbody tr.odd { background: #e6f0f2; }	
+		table tbody tr.even { background: #fff; }
+		table tbody tr.row-highlight { background-color: #fee9c6 !important; cursor: pointer; }
+		table tbody tr.row-selected { background: #fee9c6; }
+
+			table tbody tr td { font-size: 1em; padding: 10px 5px; vertical-align: middle; }
+				table tbody tr td a { color:orange; text-decoration: none; }
+
+/* Vertical Zebra Striping */
+.vzebra-odd { background-color: #ddd; }
+.vzebra-even { background-color: #eee; }
+
+.sorting { background: url(../../images/icons/sort-icon.png) no-repeat 100% 50%; }
+.sorting_asc { background: url(../../images/icons/sort-asc-icon.png) no-repeat 100% 50%; }
+.sorting_desc { background: url(../../images/icons/sort-desc-icon.png) no-repeat 100% 50%; }
+
+
